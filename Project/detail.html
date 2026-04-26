@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino Uno R3 — Detail Produk | Ochobot Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="produk.html" class="nav-link">Produk</a>
+      <!-- <a href="detail.html" class="nav-link active">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="produk.html">Produk</a>
+      <span>›</span>
+      <span>Arduino Uno R3</span>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="section detail-section">
+      <div class="detail-layout">
+
+        <!-- LEFT: IMAGES -->
+        <div class="detail-images">
+          <div class="detail-main-img">
+            <img id="mainImg" src="/ProjectUTS/Images/uno1.webp" alt="Arduino Uno R3" />
+            <span class="badge badge-hot" style="position:absolute;top:1rem;left:1rem;">TERLARIS</span>
+          </div>
+          <div class="detail-thumbs">
+            <img class="thumb active" src="/ProjectUTS/Images/uno1.webp" alt="View 1" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/uno2.jpeg" alt="View 2" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/uno3.jpg" alt="View 3" onclick="changeImg(this)" />
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="detail-info">
+          <div class="section-tag">// Mikrokontroler</div>
+          <h1 class="detail-title">Arduino Uno R3</h1>
+
+          <div class="detail-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(128 ulasan)</span>
+            <span class="stock-badge">✓ Stok Tersedia (47 unit)</span>
+          </div>
+
+          <div class="detail-price-wrap">
+            <span class="detail-price">Rp 85.000</span>
+            <span class="price-unit">/ unit</span>
+          </div>
+
+          <p class="detail-desc">
+            Arduino Uno R3 adalah papan mikrokontroler berbasis ATmega328P yang paling populer dan banyak digunakan di seluruh dunia. Dilengkapi dengan 14 pin digital I/O, 6 analog input, dan konektivitas USB yang mudah digunakan. Cocok untuk pemula yang ingin belajar pemrograman mikrokontroler maupun profesional yang membutuhkan platform prototyping cepat.
+          </p>
+
+          <!-- QUANTITY & ADD TO CART -->
+          <div class="detail-actions">
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <input type="number" id="qty" value="1" min="1" max="99" class="qty-input" readonly />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+<button class="btn-primary btn-cart" onclick="addToCart(this)">🛒 Tambah ke Keranjang</button>
+          </div>
+          <button class="btn-ghost btn-buy" onclick="buyNow(this)" data-product="Arduino Uno R3" data-price="85000">⚡ Beli Sekarang</button>
+
+          <!-- QUICK SPECS -->
+          <div class="quick-specs">
+            <div class="qs-item"><span class="qs-key">Microcontroller</span><span class="qs-val">ATmega328P</span></div>
+            <div class="qs-item"><span class="qs-key">Clock Speed</span><span class="qs-val">16 MHz</span></div>
+            <div class="qs-item"><span class="qs-key">Digital I/O</span><span class="qs-val">14 pin</span></div>
+            <div class="qs-item"><span class="qs-key">Tegangan Operasi</span><span class="qs-val">5V</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TABS: DESKRIPSI & SPESIFIKASI -->
+      <div class="detail-tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchTab('deskripsi', this)">Deskripsi</button>
+          <button class="tab-btn" onclick="switchTab('spesifikasi', this)">Spesifikasi Lengkap</button>
+          <button class="tab-btn" onclick="switchTab('ulasan', this)">Ulasan (128)</button>
+        </div>
+
+        <!-- TAB: DESKRIPSI -->
+        <div class="tab-panel active" id="tab-deskripsi">
+          <h3>Tentang Arduino Uno R3</h3>
+          <p>
+            Arduino Uno adalah salah satu board mikrokontroler yang paling banyak digunakan di dunia. Board ini menggunakan chip ATmega328P sebagai otak utamanya yang bekerja pada kecepatan clock 16 MHz. 
+          </p>
+          <p>
+            Dengan ekosistem library yang sangat besar dan komunitas yang aktif, Arduino Uno menjadi pilihan utama bagi pelajar, mahasiswa, hobbyist, dan profesional di bidang elektronika dan IoT.
+          </p>
+          <h4>Kegunaan Utama:</h4>
+          <ul class="detail-list">
+            <li>Pemrograman mikrokontroler dasar</li>
+            <li>Prototyping sistem embedded</li>
+            <li>Kontrol motor dan servo</li>
+            <li>Pembacaan sensor dan data logging</li>
+            <li>Sistem otomasi rumah (Home Automation)</li>
+            <li>Robot line follower dan mobile robot</li>
+          </ul>
+          <h4>Yang Termasuk dalam Paket:</h4>
+          <ul class="detail-list">
+            <li>1x Arduino Uno R3 Board</li>
+            <li>1x Kabel USB Type-A to Type-B</li>
+            <li>1x Lembar Quick Start Guide</li>
+          </ul>
+        </div>
+
+        <!-- TAB: SPESIFIKASI -->
+        <div class="tab-panel" id="tab-spesifikasi">
+          <h3>Spesifikasi Teknis Arduino Uno R3</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Spesifikasi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Mikrokontroler</td><td>ATmega328P</td></tr>
+                <tr><td>Tegangan Operasi</td><td>5V</td></tr>
+                <tr><td>Tegangan Input (Rekomendasi)</td><td>7–12V</td></tr>
+                <tr><td>Tegangan Input (Batas)</td><td>6–20V</td></tr>
+                <tr><td>Pin Digital I/O</td><td>14 pin (6 mendukung PWM)</td></tr>
+                <tr><td>Pin Analog Input</td><td>6 pin (resolusi 10-bit)</td></tr>
+                <tr><td>Arus DC per Pin I/O</td><td>40 mA</td></tr>
+                <tr><td>Flash Memory</td><td>32 KB (0.5 KB untuk bootloader)</td></tr>
+                <tr><td>SRAM</td><td>2 KB</td></tr>
+                <tr><td>EEPROM</td><td>1 KB</td></tr>
+                <tr><td>Clock Speed</td><td>16 MHz</td></tr>
+                <tr><td>Panjang</td><td>68.6 mm</td></tr>
+                <tr><td>Lebar</td><td>53.4 mm</td></tr>
+                <tr><td>Berat</td><td>25 g</td></tr>
+                <tr><td>Antarmuka USB</td><td>USB Type-B (via ATmega16U2)</td></tr>
+                <tr><td>Koneksi Power</td><td>USB / DC Jack / Pin Vin</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB: ULASAN -->
+        <div class="tab-panel" id="tab-ulasan">
+          <h3>Ulasan Pelanggan</h3>
+          <div class="rating-summary">
+            <div class="rating-big">4.9</div>
+            <div class="rating-stars-big">★★★★★</div>
+            <div class="rating-count-big">128 ulasan</div>
+          </div>
+          <div class="reviews-list">
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Budi Santoso</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">12 Maret 2025</p>
+              <p>"Produk original, pengiriman cepat. Langsung bisa dipakai untuk tugas akhir saya. Highly recommended!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Dewi Rahmawati</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">5 Februari 2025</p>
+              <p>"Kualitas bagus, packaging aman. Ini pembelian ke-3 saya di Ochobor Store. Harga juga bersaing!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Rizki Pratama</strong>
+                <span class="stars">★★★★☆</span>
+              </div>
+              <p class="review-date">20 Januari 2025</p>
+              <p>"Sudah pakai lebih dari 6 bulan, tidak ada masalah sama sekali. Beli lagi ah untuk project berikutnya."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section related-section">
+      <div class="section-header">
+        <div class="section-tag">// Produk Terkait</div>
+        <h2 class="section-title">Mungkin Kamu Suka</h2>
+      </div>
+      <div class="featured-grid">
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/esp.jpg" alt="ESP32" />
+          </div>
+          <div class="feat-info">
+            <h3>ESP32 DevKit V1</h3>
+            <p>Mikrokontroler dual-core dengan WiFi & Bluetooth.</p>
+            <div class="feat-footer"><span class="price">Rp 65.000</span><a href="detailESP.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ultrasonic.png" alt="HC-SR04" />
+          </div>
+          <div class="feat-info">
+            <h3>Sensor HC-SR04</h3>
+            <p>Sensor jarak ultrasonik untuk robot dan otomasi.</p>
+            <div class="feat-footer"><span class="price">Rp 15.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ESP8266.jpg" alt="NodeMCU ESP8266" />
+          </div>
+          <div class="feat-info">
+            <h3>NodeMCU ESP8266</h3>
+            <p>Modul WiFi 802.11 b/g/n dengan firmware Lua. Sempurna untuk proyek IoT berbasis HTTP dan MQTT.</p>
+            <div class="feat-footer"><span class="price">Rp 45.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART TOAST -->
+  <div class="toast" id="cartToast">✓ Produk berhasil ditambahkan ke keranjang!</div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set product data for JS functions
+    window.productData = {
+      name: 'Arduino Uno R3',
+      price: 85000
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

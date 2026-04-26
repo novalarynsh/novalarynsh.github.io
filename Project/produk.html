@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk — Ochobot Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="produk.html" class="nav-link active">Produk</a>
+      <!-- <a href="detail.html" class="nav-link">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <div class="section-tag">// Katalog Produk</div>
+        <h1>Semua Produk</h1>
+        <p>Temukan komponen elektronik dan modul IoT berkualitas tinggi untuk proyek Anda.</p>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <section class="filter-bar">
+      <div class="filter-inner">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" onclick="filterProducts('semua', this)">Semua</button>
+        <button class="filter-btn" onclick="filterProducts('mikrokontroler', this)">Mikrokontroler</button>
+        <button class="filter-btn" onclick="filterProducts('sensor', this)">Sensor</button>
+        <button class="filter-btn" onclick="filterProducts('modul', this)">Modul</button>
+        <!-- <button class="filter-btn" onclick="filterProducts('aksesoris', this)">Aksesoris</button> -->
+      </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="section products-section">
+      <div class="products-grid" id="productsGrid">
+
+        <article class="product-card" data-category="mikrokontroler">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/uno1.webp" alt="Arduino Uno R3" />
+            <span class="badge badge-hot">TERLARIS</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Mikrokontroler</span>
+            <h3>Arduino Uno R3</h3>
+            <p class="product-desc">Mikrokontroler ATmega328P, 14 digital I/O, 6 analog input. Cocok untuk pemula hingga profesional.</p>
+            <div class="product-footer">
+              <span class="price">Rp 85.000</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="detail.html" class="btn-sm">Lihat Detail</a>
+                <!-- <button class="btn-sm btn-buy-now" onclick="buyNow(this)" data-product="Arduino Uno R3" data-price="85000" style="font-size: 0.7rem; padding: 0.3rem 0.6rem;">⚡ Beli</button> -->
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="mikrokontroler">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/esp.jpg" alt="ESP32" />
+            <span class="badge badge-new">BARU</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Mikrokontroler</span>
+            <h3>ESP32 DevKit V1</h3>
+            <p class="product-desc">Dual-core 240 MHz, WiFi + Bluetooth 4.2, 38 GPIO, ADC 12-bit. Ideal untuk IoT berbasis cloud.</p>
+            <div class="product-footer">
+              <span class="price">Rp 65.000</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="detailESP.html" class="btn-sm">Lihat Detail</a>
+                <!-- <button class="btn-sm btn-buy-now" onclick="buyNow(this)" data-product="ESP32 DevKit V1" data-price="65000" style="font-size: 0.7rem; padding: 0.3rem 0.6rem;">⚡ Beli</button> -->
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="mikrokontroler">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/raspi.jpg" alt="Raspberry Pi 4" />
+            <span class="badge badge-sale">PROMO</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Mikrokontroler</span>
+            <h3>Raspberry Pi 4 Model B</h3>
+            <p class="product-desc">Single-board computer 4GB RAM, quad-core ARM, dual HDMI 4K. Pilihan terbaik untuk sistem IoT enterprise.</p>
+            <div class="product-footer">
+              <div>
+                <span class="price-old">Rp 850.000</span>
+                <span class="price">Rp 750.000</span>
+              </div>
+              <a href="detailRaspi.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="sensor">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/ultrasonic.png" alt="HC-SR04" />
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Sensor</span>
+            <h3>Sensor Ultrasonik HC-SR04</h3>
+            <p class="product-desc">Sensor jarak 2cm–400cm, akurasi 3mm. Ideal untuk robot, sistem parkir, dan level monitoring.</p>
+            <div class="product-footer">
+              <span class="price">Rp 15.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="sensor">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/dht11.png" alt="DHT11" />
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Sensor</span>
+            <h3>Sensor DHT11 Suhu & Kelembaban</h3>
+            <p class="product-desc">Mengukur suhu 0–50°C dan kelembaban 20–90% RH. Komunikasi single-wire, mudah diintegrasikan.</p>
+            <div class="product-footer">
+              <span class="price">Rp 20.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="modul">
+          <div class="product-img-wrap">
+            <img src="/ProjectUTS/Images/ESP8266.jpg" alt="NodeMCU ESP8266" />
+            <span class="badge badge-hot">POPULER</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Modul</span>
+            <h3>NodeMCU ESP8266</h3>
+            <p class="product-desc">Modul WiFi 802.11 b/g/n dengan firmware Lua. Sempurna untuk proyek IoT berbasis HTTP dan MQTT.</p>
+            <div class="product-footer">
+              <span class="price">Rp 45.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+<!-- 
+        <article class="product-card" data-category="modul">
+          <div class="product-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Relay_module.jpg/440px-Relay_module.jpg" alt="Relay Module" />
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Modul</span>
+            <h3>Modul Relay 4 Channel</h3>
+            <p class="product-desc">Relay 5V 4-channel untuk kontrol perangkat AC/DC. Dilengkapi optocoupler untuk isolasi sinyal.</p>
+            <div class="product-footer">
+              <span class="price">Rp 35.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aksesoris">
+          <div class="product-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Breadboard.jpg/440px-Breadboard.jpg" alt="Breadboard" />
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Aksesoris</span>
+            <h3>Breadboard 830 Titik</h3>
+            <p class="product-desc">Papan prototyping 830 lubang, 2 bus power. Standar industri untuk eksperimen dan pengembangan sirkuit.</p>
+            <div class="product-footer">
+              <span class="price">Rp 25.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aksesoris">
+          <div class="product-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/LCD_and_Keypad_Shield_for_Arduino.jpg/440px-LCD_and_Keypad_Shield_for_Arduino.jpg" alt="LCD Display" />
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Aksesoris</span>
+            <h3>LCD 16x2 + Modul I2C</h3>
+            <p class="product-desc">Display karakter 16x2 dengan backlight biru, dilengkapi modul I2C untuk pengkabelan minimum.</p>
+            <div class="product-footer">
+              <span class="price">Rp 30.000</span>
+              <a href="detail.html" class="btn-sm">Lihat Detail</a>
+            </div>
+          </div>
+        </article> -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="cartToast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

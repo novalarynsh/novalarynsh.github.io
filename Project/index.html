@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ochobot Store — Pusat Elektronik & Mikrokontroler</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="produk.html" class="nav-link">Produk</a>
+      <!-- <a href="detail.html" class="nav-link">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-content">
+        <div class="hero-tag">// Toko Elektronik & IoT #1</div>
+        <h1 class="hero-title">
+          Bangun Masa Depan<br/>
+          <span class="hero-accent">dengan IoT</span>
+        </h1>
+        <p class="hero-desc">
+          Temukan Arduino, ESP32, sensor, dan modul elektronik berkualitas tinggi. 
+          Wujudkan proyek IoT impian Anda bersama kami.
+        </p>
+        <div class="hero-btns">
+          <a href="produk.html" class="btn-primary">Lihat Produk →</a>
+          <a href="tentang.html" class="btn-ghost">Tentang Kami</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Produk</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Pelanggan</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">99%</span><span class="stat-label">Kepuasan</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-float">
+          <img src="/ProjectUTS/Images/esp.jpg" alt="ESP32" />
+          <div class="hero-card-label">ESP32 DevKit V1</div>
+        </div>
+        <div class="circuit-dots"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED SECTION -->
+    <section class="section featured">
+      <div class="section-header">
+        <div class="section-tag">// Produk Unggulan</div>
+        <h2 class="section-title">Pilihan Terbaik</h2>
+        <p class="section-sub">Produk paling populer di toko kami</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/uno1.webp" alt="Arduino Uno R3" />
+            <span class="badge badge-hot">TERLARIS</span>
+          </div>
+          <div class="feat-info">
+            <h3>Arduino Uno R3</h3>
+            <p>Mikrokontroler paling populer untuk pemula dan profesional.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 85.000</span>
+              <a href="detail.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/esp.jpg" alt="ESP32" />
+            <span class="badge badge-new">BARU</span>
+          </div>
+          <div class="feat-info">
+            <h3>ESP32 DevKit V1</h3>
+            <p>Modul WiFi + Bluetooth dual-core untuk proyek IoT canggih.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 65.000</span>
+              <a href="produk.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/raspi.jpg" alt="Raspberry Pi" />
+            <span class="badge badge-sale">PROMO</span>
+          </div>
+          <div class="feat-info">
+            <h3>Raspberry Pi 4 Model B</h3>
+            <p>Single-board computer powerful untuk sistem IoT kompleks.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 750.000</span>
+              <a href="produk.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ultrasonic.png" alt="Sensor Ultrasonik" />
+          </div>
+          <div class="feat-info">
+            <h3>Sensor HC-SR04</h3>
+            <p>Sensor jarak ultrasonik presisi tinggi, cocok untuk robot.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 15.000</span>
+              <a href="produk.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="produk.html" class="btn-primary">Lihat Semua Produk →</a>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section why-us">
+      <div class="section-header">
+        <div class="section-tag">// Mengapa Kami?</div>
+        <h2 class="section-title">Keunggulan Ochobot Store</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Pengiriman Cepat</h3>
+          <p>Pengiriman ke seluruh Indonesia dalam 1–3 hari kerja dengan packaging aman.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔬</div>
+          <h3>Produk Original</h3>
+          <p>Semua produk bergaransi original langsung dari distributor resmi.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛠</div>
+          <h3>Dukungan Teknis</h3>
+          <p>Tim engineer siap membantu troubleshooting dan konsultasi proyek IoT Anda.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Harga Terbaik</h3>
+          <p>Harga kompetitif dengan diskon khusus untuk pembelian dalam jumlah banyak.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER STRIP -->
+    <section class="newsletter-strip">
+      <div class="newsletter-content">
+        <h3>Dapatkan Update Produk Terbaru</h3>
+        <p>Daftar newsletter kami dan dapatkan diskon 10% untuk pembelian pertama.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Masukkan email kamu..." />
+          <button class="btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

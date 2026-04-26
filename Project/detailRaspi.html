@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raspberry Pi 4 Model B — Detail Produk | Ochobot Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="produk.html" class="nav-link">Produk</a>
+      <!-- <a href="detail.html" class="nav-link active">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="produk.html">Produk</a>
+      <span>›</span>
+      <span>Raspberry Pi 4 Model B</span>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="section detail-section">
+      <div class="detail-layout">
+
+        <!-- LEFT: IMAGES -->
+        <div class="detail-images">
+          <div class="detail-main-img">
+            <img id="mainImg" src="/ProjectUTS/Images/raspi.jpg" alt="Raspberry Pi 4 Model B" />
+            <span class="badge badge-hot" style="position:absolute;top:1rem;left:1rem;">TERLARIS</span>
+          </div>
+          <div class="detail-thumbs">
+            <img class="thumb active" src="/ProjectUTS/Images/raspi.jpg" alt="View 1" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/raspi2.avif" alt="View 2" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/raspi3.webp" alt="View 3" onclick="changeImg(this)" />
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="detail-info">
+          <div class="section-tag">// Mikrokontroler</div>
+          <h1 class="detail-title">Raspberry Pi 4 Model B</h1>
+
+          <div class="detail-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(269 ulasan)</span>
+            <span class="stock-badge">✓ Stok Tersedia (20 unit)</span>
+          </div>
+
+          <div class="detail-price-wrap">
+            <span class="price-old">Rp 850.000</span>
+            <span class="detail-price">Rp 750.000</span>
+            <span class="price-unit">/ unit</span>
+          </div>
+
+          <p class="detail-desc">
+            Raspberry Pi 4 Model B adalah komputer mini berbasis ARM yang menawarkan performa tinggi dalam ukuran yang ringkas. Dilengkapi dengan prosesor quad-core hingga 1.5 GHz, RAM hingga 8GB, serta konektivitas lengkap seperti WiFi, Bluetooth, dan Gigabit Ethernet. Cocok untuk pemula yang ingin belajar komputer dan pemrograman maupun profesional yang membutuhkan platform komputasi fleksibel untuk berbagai aplikasi.
+          </p>
+
+          <!-- QUANTITY & ADD TO CART -->
+          <div class="detail-actions">
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <input type="number" id="qty" value="1" min="1" max="99" class="qty-input" readonly />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+            <button class="btn-primary btn-cart" onclick="addToCart(this)">🛒 Tambah ke Keranjang</button>
+          </div>
+          <button class="btn-ghost btn-buy" onclick="buyNow(this)" data-product="Raspberry Pi 4 Model B" data-price="750000">⚡ Beli Sekarang</button>
+
+          <!-- QUICK SPECS -->
+          <div class="quick-specs">
+            <div class="qs-item"><span class="qs-key">Microcontroller</span><span class="qs-val">Broadcom BCM2711</span></div>
+            <div class="qs-item"><span class="qs-key">Clock Speed</span><span class="qs-val">1.5 GHz</span></div>
+            <div class="qs-item"><span class="qs-key">Digital I/O</span><span class="qs-val">40 pin GPIO</span></div>
+            <div class="qs-item"><span class="qs-key">Tegangan Operasi</span><span class="qs-val">5V</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TABS: DESKRIPSI & SPESIFIKASI -->
+      <div class="detail-tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchTab('deskripsi', this)">Deskripsi</button>
+          <button class="tab-btn" onclick="switchTab('spesifikasi', this)">Spesifikasi Lengkap</button>
+          <button class="tab-btn" onclick="switchTab('ulasan', this)">Ulasan (269)</button>
+        </div>
+
+        <!-- TAB: DESKRIPSI -->
+        <div class="tab-panel active" id="tab-deskripsi">
+          <h3>Tentang Raspberry Pi 4 Model B</h3>
+          <p>
+            Raspberry Pi 4 Model B adalah single-board computer (SBC) yang мощer dan serbaguna, dirancang untuk berbagai kebutuhan mulai dari pembelajaran pemrograman hingga pengembangan sistem komputasi dan IoT. Board ini menggunakan prosesor quad-core ARM Cortex-A72 dengan kecepatan hingga 1.5 GHz, serta mendukung RAM hingga 8GB, memberikan performa yang jauh lebih tinggi dibanding generasi sebelumnya. 
+          </p>
+          <p>
+            Dengan dukungan sistem operasi berbasis Linux, konektivitas lengkap (WiFi, Bluetooth, Ethernet), serta berbagai port seperti HDMI, USB 3.0, dan GPIO, Raspberry Pi 4 Model B sangat cocok digunakan oleh pelajar, developer, hingga profesional untuk berbagai proyek teknologi.
+          </p>
+          <h4>Kegunaan Utama:</h4>
+          <ul class="detail-list">
+            <li>Pembelajaran pemrograman dan komputer dasar</li>
+            <li>Pengembangan server kecil (web server, database, dll)</li>
+            <li>Proyek Internet of Things (IoT)</li>
+            <li>Media center (streaming video dan audio)</li>
+            <li>Sistem smart home dan otomasi industri</li>
+            <li>Robotika dan sistem embedded berbasis Linux</li>
+          </ul>
+          <h4>Yang Termasuk dalam Paket:</h4>
+          <ul class="detail-list">
+            <li>1x Raspberry Pi 4 Model B Board</li>
+            <li>1x Kabel USB Type-C (power)</li>
+            <li>1x Lembar Quick Start Guide</li>
+          </ul>
+        </div>
+
+        <!-- TAB: SPESIFIKASI -->
+        <div class="tab-panel" id="tab-spesifikasi">
+          <h3>Spesifikasi Teknis Raspberry Pi 4 Model B</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Spesifikasi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Mikrokontroler</td><td>Broadcom BCM2711 (Quad-Core ARM Cortex-A72)</td></tr>
+                <tr><td>Tegangan Operasi</td><td>5V</td></tr>
+                <tr><td>Tegangan Input (Rekomendasi)</td><td>5V / 3A (via USB Type-C)</td></tr>
+                <tr><td>RAM</td><td>2GB / 4GB / 8GB LPDDR4</td></tr>
+                <tr><td>GPIO</td><td>40 pin GPIO</td></tr>
+                <tr><td>Port USB</td><td>2x USB 3.0, 2x USB 2.0</td></tr>
+                <tr><td>Port HDMI</td><td>2x Micro HDMI (hingga 4K)</td></tr>
+                <tr><td>Port Audio</td><td>HDMI / 3.5mm jack</td></tr>
+                <tr><td>Clock Speed</td><td>1.5 GHz</td></tr>
+                <tr><td>Penyimpanan/td><td>MicroSD Card</td></tr>
+                <tr><td>WiFi</td><td>802.11 b/g/n/ac (2.4 & 5 GHz)</td></tr>
+                <tr><td>Bluetooth</td><td>Bluetooth 5.0 / BLE</td></tr>
+                <tr><td>Bluetooth</td><td>Gigabit Ethernet</td></tr>
+                <tr><td>Panjang</td><td>85 mm</td></tr>
+                <tr><td>Lebar</td><td>56 mm</td></tr>
+                <tr><td>Berat</td><td>46 g</td></tr>
+                <tr><td>Antarmuka USB</td><td>USB Type-C (Power)</td></tr>
+                <tr><td>Koneksi Power</td><td>USB Type-C</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB: ULASAN -->
+        <div class="tab-panel" id="tab-ulasan">
+          <h3>Ulasan Pelanggan</h3>
+          <div class="rating-summary">
+            <div class="rating-big">4.9</div>
+            <div class="rating-stars-big">★★★★★</div>
+            <div class="rating-count-big">269 ulasan</div>
+          </div>
+          <div class="reviews-list">
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Budi Santoso</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">12 Maret 2025</p>
+              <p>"Produk original, pengiriman cepat. Langsung bisa dipakai untuk tugas akhir saya. Highly recommended!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Dewi Rahmawati</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">5 Februari 2025</p>
+              <p>"Kualitas bagus, packaging aman. Ini pembelian ke-3 saya di Ochobor Store. Harga juga bersaing!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Rizki Pratama</strong>
+                <span class="stars">★★★★☆</span>
+              </div>
+              <p class="review-date">20 Januari 2025</p>
+              <p>"Sudah pakai lebih dari 6 bulan, tidak ada masalah sama sekali. Beli lagi ah untuk project berikutnya."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section related-section">
+      <div class="section-header">
+        <div class="section-tag">// Produk Terkait</div>
+        <h2 class="section-title">Mungkin Kamu Suka</h2>
+      </div>
+      <div class="featured-grid">
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/uno1.webp" alt="Arduino Uno R3" />
+            <span class="badge badge-hot">TERLARIS</span>
+          </div>
+          <div class="feat-info">
+            <h3>Arduino Uno R3</h3>
+            <p>Mikrokontroler paling populer untuk pemula dan profesional.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 85.000</span>
+              <a href="detail.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ultrasonic.png" alt="HC-SR04" />
+          </div>
+          <div class="feat-info">
+            <h3>Sensor HC-SR04</h3>
+            <p>Sensor jarak ultrasonik untuk robot dan otomasi.</p>
+            <div class="feat-footer"><span class="price">Rp 15.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ESP8266.jpg" alt="NodeMCU ESP8266" />
+          </div>
+          <div class="feat-info">
+            <h3>NodeMCU ESP8266</h3>
+            <p>Modul WiFi 802.11 b/g/n dengan firmware Lua. Sempurna untuk proyek IoT berbasis HTTP dan MQTT.</p>
+            <div class="feat-footer"><span class="price">Rp 45.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART TOAST -->
+  <div class="toast" id="cartToast">✓ Produk berhasil ditambahkan ke keranjang!</div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set product data for JS functions
+    window.productData = {
+      name: 'Raspberry Pi 4 Model B',
+      price: 85000
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

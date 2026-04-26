@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak — Ochobot Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="produk.html" class="nav-link">Produk</a>
+      <!-- <a href="detail.html" class="nav-link">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link active">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <div class="section-tag">// Hubungi Kami</div>
+        <h1>Ada Pertanyaan?</h1>
+        <p>Tim kami siap membantu Anda — dari konsultasi produk hingga dukungan teknis.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="section contact-section">
+      <div class="contact-layout">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <div class="section-tag">// Kirim Pesan</div>
+          <h2>Formulir Kontak</h2>
+          <p class="form-sub">Isi form di bawah ini dan kami akan membalas dalam 1x24 jam kerja.</p>
+
+          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="nama@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="telepon">Nomor Telepon</label>
+              <input type="tel" id="telepon" name="telepon" placeholder="+62 812 xxxx xxxx" />
+            </div>
+
+            <div class="form-group">
+              <label for="subjek">Subjek <span class="required">*</span></label>
+              <select id="subjek" name="subjek" required>
+                <option value="">-- Pilih Subjek --</option>
+                <option value="pertanyaan-produk">Pertanyaan Produk</option>
+                <option value="status-pesanan">Status Pesanan</option>
+                <option value="dukungan-teknis">Dukungan Teknis</option>
+                <option value="kerjasama">Kerjasama / Wholesale</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan <span class="required">*</span></label>
+              <textarea id="pesan" name="pesan" rows="6" placeholder="Tuliskan pertanyaan atau pesan Anda di sini..." required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="setuju" required />
+                <span>Saya menyetujui <a href="#">Kebijakan Privasi</a> Ochobot Store</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary btn-full">
+              <span id="submitText">Kirim Pesan →</span>
+            </button>
+
+          </form>
+
+          <!-- SUCCESS MESSAGE -->
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="success-icon">✓</div>
+            <h3>Pesan Terkirim!</h3>
+            <p>Terima kasih, kami akan membalas dalam 1x24 jam kerja.</p>
+            <button class="btn-ghost" onclick="resetForm()">Kirim Pesan Lagi</button>
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <div class="section-tag">// Info Kontak</div>
+          <h2>Temukan Kami</h2>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div>
+                <h4>Alamat Toko</h4>
+                <p>Modern, Jl. Jenderal Sudirman No.40, RT.002/RW.006, Cikokol, Kec. Tangerang, Kota Tangerang, Banten 15117</p>
+              </div>
+            </div>
+
+            <!-- <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div>
+                <h4>Telepon / WhatsApp</h4>
+                <p>+62 812-3456-7890<br/><small>Senin – Sabtu, 09.00 – 17.00 WIB</small></p>
+              </div>
+            </div> -->
+
+            <div class="contact-card">
+              <div class="contact-card-icon">✉</div>
+              <div>
+                <h4>Email</h4>
+                <p>noval.aryansyah@raharja.info<br/><small>Respon dalam 1x24 jam kerja</small></p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">🕐</div>
+              <div>
+                <h4>Jam Operasional</h4>
+                <table class="hours-table">
+                  <tr><td>Senin – Jumat</td><td>09.00 – 17.00</td></tr>
+                  <tr><td>Sabtu</td><td>09.00 – 14.00</td></tr>
+                  <tr><td>Minggu</td><td>Tutup</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- SOSMED -->
+          <div class="social-links">
+            <h4>Ikuti Kami</h4>
+            <div class="social-btns">
+              <a href="#" class="social-btn">Instagram</a>
+              <a href="#" class="social-btn">YouTube</a>
+              <a href="#" class="social-btn">Tokopedia</a>
+              <a href="#" class="social-btn">Shopee</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAP PLACEHOLDER -->
+    <section class="section map-section">
+      <div class="section-tag">// Lokasi</div>
+      <h2 class="section-title">Kunjungi Toko Kami</h2>
+      <div class="map-placeholder">
+        <div class="map-overlay">
+          <!-- <span class="map-pin">📍</span>
+          <p>Jl. Teknologi No. 42, Bandung</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-sm">Buka di Google Maps →</a> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5162931639547!2d106.63184197455601!3d-6.1954023937922695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f92f1c580343%3A0xe46d6a860cce25ec!2sUniversitas%20Raharja!5e0!3m2!1sid!2sid!4v1776959195217!5m2!1sid!2sid" width="1125" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+      <div class="section-header">
+        <div class="section-tag">// FAQ</div>
+        <h2 class="section-title">Pertanyaan Umum</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Apakah semua produk bergaransi? <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>Ya, semua produk yang kami jual bergaransi original. Garansi berlaku selama 1–12 bulan tergantung jenis produk. Jika ada kerusakan dalam masa garansi, kami akan mengganti produk.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Berapa lama waktu pengiriman? <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>Pengiriman regular membutuhkan 2–5 hari kerja. Untuk pengiriman ekspres (same-day atau next-day), tersedia untuk kota Bandung dan sekitarnya.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Apakah ada diskon untuk pembelian bulk? <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>Tentu! Kami memberikan diskon mulai dari 10–30% untuk pembelian 10 unit ke atas. Silahkan hubungi kami melalui email atau WhatsApp untuk informasi harga wholesale.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Apakah ada dukungan teknis? <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>Kami memiliki tim engineer yang siap membantu troubleshooting, konsultasi desain sirkuit, dan rekomendasi komponen. Hubungi kami melalui email atau WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FORM TOAST -->
+  <div class="toast" id="formToast"></div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

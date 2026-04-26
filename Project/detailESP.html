@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP32 DevKit V1 — Detail Produk | Ochobot Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="produk.html" class="nav-link">Produk</a>
+      <!-- <a href="detail.html" class="nav-link active">Detail Produk</a> -->
+      <a href="tentang.html" class="nav-link">Tentang Kami</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+    </nav>
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="theme-icon">☀</span>
+    </button> -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="produk.html">Produk</a>
+      <span>›</span>
+      <span>ESP32 DevKit V1</span>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="section detail-section">
+      <div class="detail-layout">
+
+        <!-- LEFT: IMAGES -->
+        <div class="detail-images">
+          <div class="detail-main-img">
+            <img id="mainImg" src="/ProjectUTS/Images/esp.jpg" alt="ESP32 DevKit V1" />
+            <span class="badge badge-hot" style="position:absolute;top:1rem;left:1rem;">TERLARIS</span>
+          </div>
+          <div class="detail-thumbs">
+            <img class="thumb active" src="/ProjectUTS/Images/esp.jpg" alt="View 1" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/esp2.jfif" alt="View 2" onclick="changeImg(this)" />
+            <img class="thumb" src="/ProjectUTS/Images/esp3.webp" alt="View 3" onclick="changeImg(this)" />
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="detail-info">
+          <div class="section-tag">// Mikrokontroler</div>
+          <h1 class="detail-title">ESP32 DevKit V1</h1>
+
+          <div class="detail-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(56 ulasan)</span>
+            <span class="stock-badge">✓ Stok Tersedia (100 unit)</span>
+          </div>
+
+          <div class="detail-price-wrap">
+            <span class="detail-price">Rp 85.000</span>
+            <span class="price-unit">/ unit</span>
+          </div>
+
+          <p class="detail-desc">
+            ESP32 DevKit V1 adalah papan mikrokontroler berbasis chip ESP32 yang мощer dan serbaguna untuk berbagai kebutuhan pengembangan sistem embedded dan IoT. Dilengkapi dengan prosesor dual-core hingga 240 MHz, konektivitas WiFi dan Bluetooth bawaan, serta puluhan pin GPIO yang fleksibel. Board ini sangat cocok untuk pemula yang ingin belajar IoT maupun profesional yang membutuhkan performa tinggi untuk prototyping dan pengembangan sistem berbasis wireless.
+          </p>
+
+          <!-- QUANTITY & ADD TO CART -->
+          <div class="detail-actions">
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <input type="number" id="qty" value="1" min="1" max="99" class="qty-input" readonly />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+<button class="btn-primary btn-cart" onclick="addToCart(this)">🛒 Tambah ke Keranjang</button>
+          </div>
+          <button class="btn-ghost btn-buy" onclick="buyNow(this)" data-product="ESP32 DevKit V1" data-price="85000">⚡ Beli Sekarang</button>
+
+          <!-- QUICK SPECS -->
+          <div class="quick-specs">
+            <div class="qs-item"><span class="qs-key">Microcontroller</span><span class="qs-val">Xtensa Dual-Core 32-bit</span></div>
+            <div class="qs-item"><span class="qs-key">Clock Speed</span><span class="qs-val">240 MHz</span></div>
+            <div class="qs-item"><span class="qs-key">Digital I/O</span><span class="qs-val">30-34 pin</span></div>
+            <div class="qs-item"><span class="qs-key">Tegangan Operasi</span><span class="qs-val">3.3V</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TABS: DESKRIPSI & SPESIFIKASI -->
+      <div class="detail-tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchTab('deskripsi', this)">Deskripsi</button>
+          <button class="tab-btn" onclick="switchTab('spesifikasi', this)">Spesifikasi Lengkap</button>
+          <button class="tab-btn" onclick="switchTab('ulasan', this)">Ulasan (56)</button>
+        </div>
+
+        <!-- TAB: DESKRIPSI -->
+        <div class="tab-panel active" id="tab-deskripsi">
+          <h3>Tentang ESP32 DevKit V1</h3>
+          <p>
+            ESP32 DevKit V1 adalah salah satu board mikrokontroler yang sangat populer untuk pengembangan sistem IoT modern. Board ini menggunakan chip ESP32 sebagai otak utamanya yang memiliki prosesor dual-core hingga 240 MHz serta sudah dilengkapi dengan fitur WiFi dan Bluetooth bawaan. 
+          </p>
+          <p>
+            Dengan performa yang tinggi, konsumsi daya yang efisien, serta dukungan library yang luas melalui Arduino IDE maupun ESP-IDF, ESP32 DevKit V1 menjadi pilihan utama bagi pelajar, mahasiswa, developer, hingga profesional di bidang IoT dan embedded system.
+          </p>
+          <h4>Kegunaan Utama:</h4>
+          <ul class="detail-list">
+            <li>Pemrograman mikrokontroler tingkat lanjut</li>
+            <li>Pengembangan Internet of Things (IoT) berbasis WiFi & Bluetooth</li>
+            <li>Monitoring dan kontrol jarak jauh (remote system)</li>
+            <li>Pembacaan sensor dan data logging</li>
+            <li>Sistem smart home dan otomasi industri</li>
+            <li>Robotika dan sistem kendali berbasis wireless</li>
+          </ul>
+          <h4>Yang Termasuk dalam Paket:</h4>
+          <ul class="detail-list">
+            <li>1x ESP32 DevKit V1 Board</li>
+            <li>1x Kabel USB Type-A to Micro USB</li>
+            <li>1x Lembar Quick Start Guide</li>
+          </ul>
+        </div>
+
+        <!-- TAB: SPESIFIKASI -->
+        <div class="tab-panel" id="tab-spesifikasi">
+          <h3>Spesifikasi Teknis ESP32 DevKit V1</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Spesifikasi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Mikrokontroler</td><td>ESP32 (Xtensa Dual-Core 32-bit)</td></tr>
+                <tr><td>Tegangan Operasi</td><td>3.3V</td></tr>
+                <tr><td>Tegangan Input (Rekomendasi)</td><td>5V (via USB) & 7–12V (via Vin)</td></tr>
+                <tr><td>Tegangan Input (Batas)</td><td>5–12V</td></tr>
+                <tr><td>Pin Digital I/O</td><td>30–34 pin (tergantung versi board)</td></tr>
+                <tr><td>Pin Analog Input</td><td>Hingga 18 channel ADC (resolusi 12-bit)</td></tr>
+                <tr><td>Arus DC per Pin I/O</td><td>12 mA</td></tr>
+                <tr><td>Flash Memory</td><td>4 MB</td></tr>
+                <tr><td>SRAM</td><td>520 KB</td></tr>
+                <tr><td>EEPROM</td><td>Emulasi di Flash</td></tr>
+                <tr><td>Clock Speed</td><td>240 MHz</td></tr>
+                <tr><td>WiFi</td><td>802.11 b/g/n (2.4 GHz)</td></tr>
+                <tr><td>Bluetooth</td><td>Bluetooth v4.2 (Classic & BLE)</td></tr>
+                <tr><td>Panjang</td><td>51 mm</td></tr>
+                <tr><td>Lebar</td><td>25 mm</td></tr>
+                <tr><td>Berat</td><td>10 g</td></tr>
+                <tr><td>Antarmuka USB</td><td>Micro USB (via CP2102 / CH340)</td></tr>
+                <tr><td>Koneksi Power</td><td>USB / Pin Vin / 3.3V Pin</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB: ULASAN -->
+        <div class="tab-panel" id="tab-ulasan">
+          <h3>Ulasan Pelanggan</h3>
+          <div class="rating-summary">
+            <div class="rating-big">4.9</div>
+            <div class="rating-stars-big">★★★★★</div>
+            <div class="rating-count-big">56 ulasan</div>
+          </div>
+          <div class="reviews-list">
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Budi Santoso</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">12 Maret 2025</p>
+              <p>"Produk original, pengiriman cepat. Langsung bisa dipakai untuk tugas akhir saya. Highly recommended!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Dewi Rahmawati</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <p class="review-date">5 Februari 2025</p>
+              <p>"Kualitas bagus, packaging aman. Ini pembelian ke-3 saya di Ochobor Store. Harga juga bersaing!"</p>
+            </div>
+            <div class="review-card">
+              <div class="review-header">
+                <strong>Rizki Pratama</strong>
+                <span class="stars">★★★★☆</span>
+              </div>
+              <p class="review-date">20 Januari 2025</p>
+              <p>"Sudah pakai lebih dari 6 bulan, tidak ada masalah sama sekali. Beli lagi ah untuk project berikutnya."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section related-section">
+      <div class="section-header">
+        <div class="section-tag">// Produk Terkait</div>
+        <h2 class="section-title">Mungkin Kamu Suka</h2>
+      </div>
+      <div class="featured-grid">
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/raspi.jpg" alt="Raspberry Pi" />
+            <span class="badge badge-sale">PROMO</span>
+          </div>
+          <div class="feat-info">
+            <h3>Raspberry Pi 4 Model B</h3>
+            <p>Single-board computer powerful untuk sistem IoT kompleks.</p>
+            <div class="feat-footer">
+              <span class="price">Rp 750.000</span>
+              <a href="detailRaspi.html" class="btn-sm">Detail</a>
+            </div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ultrasonic.png" alt="HC-SR04" />
+          </div>
+          <div class="feat-info">
+            <h3>Sensor HC-SR04</h3>
+            <p>Sensor jarak ultrasonik untuk robot dan otomasi.</p>
+            <div class="feat-footer"><span class="price">Rp 15.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <div class="feat-img-wrap">
+            <img src="/ProjectUTS/Images/ESP8266.jpg" alt="NodeMCU ESP8266" />
+          </div>
+          <div class="feat-info">
+            <h3>NodeMCU ESP8266</h3>
+            <p>Modul WiFi 802.11 b/g/n dengan firmware Lua. Sempurna untuk proyek IoT berbasis HTTP dan MQTT.</p>
+            <div class="feat-footer"><span class="price">Rp 45.000</span><a href="produk.html" class="btn-sm">Detail</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART TOAST -->
+  <div class="toast" id="cartToast">✓ Produk berhasil ditambahkan ke keranjang!</div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bracket">[</span>Ochobot<span class="logo-accent">Store</span><span class="logo-bracket">]</span></div>
+        <p>Pusat penjualan komponen elektronik dan IoT terpercaya di Indonesia sejak 2018.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="produk.html">Arduino</a></li>
+          <li><a href="produk.html">ESP32 / ESP8266</a></li>
+          <li><a href="produk.html">Sensor</a></li>
+          <li><a href="produk.html">Raspberry Pi</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <p>📍 Jl. Jendral Sudirman No. 40, Kota Tangerang</p>
+        <p>✉ noval.aryansyah@raharja.info</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ochobot Store. All rights reserved. | Noval Aryansah</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set product data for JS functions
+    window.productData = {
+      name: 'ESP32 DevKit V1',
+      price: 85000
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
